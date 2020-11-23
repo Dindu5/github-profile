@@ -176,7 +176,7 @@ a:focus {
   transform: translateX(-50%);
   z-index: 4;
   transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
-  box-shadow: 0.3px 0.3px 10px #001430;
+  box-shadow: 1px 1px 10px #001430;
 }
 .error-message.open {
   bottom: 3rem;
