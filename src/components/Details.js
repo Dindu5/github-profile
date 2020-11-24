@@ -10,9 +10,8 @@ function Details(props) {
       <span>
         <p className="heading">Name :</p>
         <p>
-          {" "}
           {!props.loading ? (
-            { name }
+            name
           ) : (
             <Skeleton variant="rect" height={20} width={150} />
           )}
@@ -21,12 +20,11 @@ function Details(props) {
       <span>
         <p className="heading">Bio&nbsp;:</p>
         <p>
-          {" "}
           {!props.loading ? (
-            { bio }
+            bio
           ) : (
             <Skeleton variant="rect" height={20} width={150} />
-          )}{" "}
+          )}
         </p>
       </span>
 

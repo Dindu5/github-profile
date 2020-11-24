@@ -46,7 +46,7 @@ export default function App() {
         } else {
           setError("There was an error.. sem");
         }
-        messageBox.classList.add("open");
+        //messageBox.classList.add("open");
       });
   }, [search]);
 
