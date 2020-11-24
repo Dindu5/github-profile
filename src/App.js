@@ -96,7 +96,7 @@ export default function App() {
 
       <div className="grid">
         {/* Main Details */}
-        s
+
         <Main loading={loading} userdata={userdata} />
         <div className="others">
           {/* User Details */}
