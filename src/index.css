@@ -73,7 +73,7 @@ form button {
 }
 .img-container {
   width: 50%;
-  min-height: 1rem;
+  min-height: 10rem;
   border-radius: 50%;
   margin: auto;
   margin-bottom: 1rem;
@@ -160,28 +160,60 @@ a:focus {
 .MuiSkeleton-root {
   background-color: #fefefe98 !important;
 }
-
+.contain {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  z-index: 20;
+}
 .error-message {
   position: absolute;
-  bottom: -13rem;
   display: flex;
   width: 50vw;
   justify-content: space-between;
   align-items: center;
   color: #a32828;
-  background-color: #001430;
+  background-color: #000000;
   margin: auto;
   padding: 1rem;
+  visibility: hidden;
+  z-index: 22;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.6s;
-  box-shadow: 1px 1px 10px #001430;
-}
-.error-message.open {
-  bottom: 3rem;
+  transform: translateX(50%) translateY(75vh);
+  top: 70%;
+  z-index: 12;
+  transition: all 0.6s;
+  box-shadow: 1px 1px 10px #000d1d;
 }
 
+.error-message.open {
+  visibility: visible;
+  transition: visibility 0.6s;
+  transform: translateX(50%) translateY(65vh);
+}
+.error-message.open ~ .overlay {
+  visibility: visible;
+}
+@keyframes slideIn {
+  from {
+    top: 80%;
+    visibility: hidden;
+  }
+  to {
+    top: 80%;
+    visibility: visible;
+  }
+}
 @media only screen and (max-width: 900px) {
   nav {
     padding: 1rem 3rem;

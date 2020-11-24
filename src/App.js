@@ -38,13 +38,15 @@ export default function App() {
         })
       )
       .catch((err) => {
-        console.log("there was an error", err.message);
         const messageBox = message.current;
 
         if (err.message === "Network Error") {
           setError("Oops... Seems Your Internet Disconnected");
+        }
+        if (err.response.status === 404) {
+          setError("The User you searched for was not found");
         } else {
-          setError("There was an error.. sem");
+          setError("There was an error");
         }
         messageBox.classList.add("open");
       });
@@ -58,11 +60,15 @@ export default function App() {
 
   const fetchUser = (e, userSearch) => {
     e.preventDefault();
-    setLoading(true);
+
     if (userSearch !== "") {
+      setLoading(true);
+      console.log("fired");
       setsearch(userSearch);
       setUserSearch("");
+      setError("");
     }
+    e.target.reset();
   };
 
   const closeError = (e) => {
@@ -109,13 +115,16 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="error-message" ref={message}>
-        <p className="error">{error}</p>
-        <CancelIcon
-          onClick={(e) => {
-            closeError(e);
-          }}
-        />
+      <div className="contain">
+        <div className="error-message" ref={message}>
+          <p className="error">{error}</p>
+          <CancelIcon
+            onClick={(e) => {
+              closeError(e);
+            }}
+          />
+        </div>
+        <div className="overlay"></div>
       </div>
     </div>
   );
