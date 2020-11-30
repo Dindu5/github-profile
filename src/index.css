@@ -7,14 +7,14 @@
 }
 
 body {
-  background: #071e3d;
+  background: #1f1f1f;
   font-family: "Titillium Web", sans-serif !important;
 }
 
 nav {
   display: flex;
   padding: 1rem 5rem;
-  background: #001430;
+  background: #121212;
   color: #21e6c1;
 }
 
@@ -32,9 +32,9 @@ form button {
   outline: none;
   cursor: pointer;
   margin-left: 1rem;
-  background: #21e6c1;
+  background: #424242;
   border-radius: 4px;
-  color: #fefefe;
+  color: #eaeaea;
   border: none;
 }
 
@@ -46,10 +46,10 @@ form button {
 
 #main-profile {
   padding: 1rem;
-  background: #001430;
+  background: #121212;
   box-shadow: 2px 2px 10px rgba(0, 20, 48, 0.15);
   border-radius: 5px;
-  color: #fefefe;
+  color: #eaeaea;
   border: 1px solid #21e6c1;
   width: 30%;
   margin-right: 1rem;
@@ -61,10 +61,10 @@ form button {
 #content1,
 #content4 {
   padding: 1rem;
-  background: #001430;
+  background: #121212;
   box-shadow: 2px 2px 10px rgba(0, 20, 48, 0.15);
   border-radius: 5px;
-  color: #fefefe;
+  color: #eaeaea;
 }
 
 #content4 {
@@ -131,7 +131,7 @@ a:focus {
 .MuiTablePagination-toolbar,
 .MuiIconButton-root.Mui-disabled,
 .MuiFormLabel-root {
-  color: #fefefe !important;
+  color: #eaeaea !important;
   font-family: "Titillium Web", sans-serif !important;
 }
 
@@ -142,7 +142,7 @@ a:focus {
   display: none !important;
 }
 .MuiTableContainer-root {
-  background-color: #001430 !important;
+  background-color: #121212 !important;
 }
 .MuiOutlinedInput-notchedOutline {
   border-color: #21e6c1 !important;
@@ -158,7 +158,7 @@ a:focus {
   color: #21e6c1 !important;
 }
 .MuiSkeleton-root {
-  background-color: #fefefe98 !important;
+  background-color: #eaeaea98 !important;
 }
 .contain {
   position: absolute;
@@ -271,5 +271,11 @@ a:focus {
   }
   .MuiSkeleton-circle {
     height: 39vw !important;
+  }
+  form {
+    max-width: 100%;
+    margin: 2rem 1.9rem;
+    display: flex;
+    justify-content: center;
   }
 }

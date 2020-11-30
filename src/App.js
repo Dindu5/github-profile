@@ -42,8 +42,7 @@ export default function App() {
 
         if (err.message === "Network Error") {
           setError("Oops... Seems Your Internet Disconnected");
-        }
-        if (err.response.status === 404) {
+        } else if (err.response.status === 404) {
           setError("The User you searched for was not found");
         } else {
           setError("There was an error");
@@ -63,7 +62,6 @@ export default function App() {
 
     if (userSearch !== "") {
       setLoading(true);
-      console.log("fired");
       setsearch(userSearch);
       setUserSearch("");
       setError("");
